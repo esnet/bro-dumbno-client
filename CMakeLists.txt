@@ -5,11 +5,11 @@ project(BroPluginDumbno)
 
 include(BroPlugin)
 
-bro_plugin_begin(NCSA Dumbno)
-bro_plugin_cc(src/Plugin.cc)
-bro_plugin_bif(src/dumbno.bif)
-bro_plugin_dist_files(README CHANGES COPYING VERSION)
-bro_plugin_end()
+zeek_plugin_begin(NCSA Dumbno)
+zeek_plugin_cc(src/Plugin.cc)
+zeek_plugin_bif(src/dumbno.bif)
+zeek_plugin_dist_files(README CHANGES COPYING VERSION)
+zeek_plugin_end()
 
 file(STRINGS "${CMAKE_CURRENT_SOURCE_DIR}/VERSION" VERSION LIMIT_COUNT 1)
 
